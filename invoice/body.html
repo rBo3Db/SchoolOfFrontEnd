@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title> </title>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="underscore.js"></script>
+		<script type="text/javascript" src="require.js"></script>
+		<script>
+			require.config({map:{'*':{tpl:'tpl'}}});
+			require(["myScript"], function(mycontrol) {
+				mycontrol('.my-control');
+			});
+		</script>
+	</head>
+	<body>
+		<div class="my-control">Тут должен быть мой элемент</div>
+		<div class="my-control2"> второй элемент </div>
+	</body>
+</html>

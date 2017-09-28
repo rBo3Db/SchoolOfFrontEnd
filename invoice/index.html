@@ -1,0 +1,56 @@
+<link rel="stylesheet" type="text/css" href="style.css">	
+<div class="fe-my-invoice">
+	<table>
+		<tr class="small-text">
+			<th class="first-column">Наименование</th>
+			<th>Ед. изм.</th>
+			<th>Кол-во</th>
+			<th>Цена за единицу</th>
+			<th>Стоимость всего без налога</th>
+			<th>В том числе акциз</th>
+			<th>Налоговая ставка</th>
+			<th>Сумма налога</th>
+			<th>Стоимость всего с учетом налога</th>
+			<th>Страна</th>
+			<th>Номер ТД</th>
+		</tr>
+		<tr class="namber small-text">
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th>6</th>
+			<th>7</th>
+			<th>8</th>
+			<th>9</th>
+			<th>10</th>
+			<th>11</th>
+		</tr>
+		<tr>
+			<td><%= obj.name %></td>
+			<td><%= obj.единица_измерения %></td>
+			<td class="right"><%= obj.количество %></td>
+			<td class="right"><%= obj.цена_за_единицу %></td>
+			<td class="right"><%= obj.цена_за_всё %></td>
+			<td class="right"><%= obj.акциз %></td>
+			<td>
+				<select>
+  					<option>18%</option>
+  					<option>13%</option>
+				</select>
+			</td>
+			<td class="right"><%= obj.сумма_налога %></td>
+			<td class="right"><%= obj.стоимость_всего_с_учетом_налога %></td>
+			<td><%= obj.страна %></td> 
+			<td class="right"><%= obj.номер_тд %></td>
+		</tr>
+		<tr>
+			<td class="right namber small-text">Доп.сведения</td>
+			<td><%= obj.дополнительные_сведенья1 %> </td>
+			<td></td>
+			<td></td>
+			<td><%= obj.дополнительные_сведенья2 %></td>
+		</tr>
+	</table>
+</div>

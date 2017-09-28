@@ -1,0 +1,26 @@
+
+
+body {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+   }
+
+div.fe-my-invoice .small-text {
+	font-size: 9pt;
+}
+div.fe-my-invoice td {
+	font-size: 11pt;
+}
+div.fe-my-invoice tr {
+	padding: 15px;
+}
+div.fe-my-invoice .namber {
+	color: gray;
+	font-weight: normal;
+	border-top: 1px;
+}
+div.fe-my-invoice .right {
+	text-align: right;
+}
+div.fe-my-invoice th.first-column {
+	width: 16%;
+}
