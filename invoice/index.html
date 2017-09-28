@@ -27,24 +27,28 @@
 			<th>10</th>
 			<th>11</th>
 		</tr>
+		<% for (var i=0; i < obj.length; i++) {
+			var row = obj[i];
+		%>
 		<tr>
-			<td><%= obj.name %></td>
-			<td><%= obj.единица_измерения %></td>
-			<td class="right"><%= obj.количество %></td>
-			<td class="right"><%= obj.цена_за_единицу %></td>
-			<td class="right"><%= obj.цена_за_всё %></td>
-			<td class="right"><%= obj.акциз %></td>
+			<td><%= row.name %></td>
+			<td><%= row.единица_измерения %></td>
+			<td class="right"><%= row.количество %></td>
+			<td class="right"><%= row.цена_за_единицу %></td>
+			<td class="right"><%= row.цена_за_всё %></td>
+			<td class="right"><%= row.акциз %></td>
 			<td>
 				<select>
   					<option>18%</option>
   					<option>13%</option>
 				</select>
 			</td>
-			<td class="right"><%= obj.сумма_налога %></td>
-			<td class="right"><%= obj.стоимость_всего_с_учетом_налога %></td>
-			<td><%= obj.страна %></td> 
-			<td class="right"><%= obj.номер_тд %></td>
+			<td class="right"><%= row.сумма_налога %></td>
+			<td class="right"><%= row.стоимость_всего_с_учетом_налога %></td>
+			<td><%= row.страна %></td> 
+			<td class="right"><%= row.номер_тд %></td>
 		</tr>
+		<% } %>
 		<tr>
 			<td class="right namber small-text">Доп.сведения</td>
 			<td><%= obj.дополнительные_сведенья1 %> </td>
