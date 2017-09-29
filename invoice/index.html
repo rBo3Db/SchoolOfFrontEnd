@@ -32,12 +32,13 @@
 			for (var i=0; i < obj.length; i++) {
 			console.log('яв шаблоне! 2');
 				var row = obj[i];
+			console.log ();
 		%>
 		<tr>
 			<td><%= row.name %></td>
 			<td><%= row.единица_измерения %></td>
 			<td class="right"><%= row.количество %></td>
-			<td class="right"><%= row.цена_за_единицу %></td>
+			<td clas="right"><%= row.цена_за_единицу %></td>
 			<td class="right"><%= row.цена_за_всё %></td>
 			<td class="right"><%= row.акциз %></td>
 			<td>
@@ -53,13 +54,42 @@
 		</tr>
 		<tr>
 			<td class="right namber small-text">Доп.сведения</td>
-			<td><%= row.дополнительные_сведенья1 %> </td>
-			<td></td>
-			<td></td>
-			<td><%= row.дополнительные_сведенья2 %></td>
+			<td colspan="3"><%= row.дополнительные_сведенья1 %> </td>
+			<td colspan="5"><%= row.дополнительные_сведенья2 %></td>
 		</tr>
 		<% 
 		}; 
 		console.log('яв шаблоне! 3'); %>
+		<form name="введеные данные">
+			<tr>
+				<td><input type="text" name="имя" size="10px"></td>
+				<td><input type="text" name="единица_измерения" ></td>
+				<td><input type="text" name="количество" pattern="^[ 0-9]+$"></td>
+				<td><input type="text" name="цена_за_единицу"></td>
+				<td><input type="text" name="цена_за_всё"></td>
+				<td><input type="text" name="акциз"></td>
+				<td>
+					<select>
+  						<option>18%</option>
+  						<option>13%</option>
+					</select>
+				</td>
+				<td><input type="text" name="сумма_налога"></td>
+				<td><input type="text" name="стоимость_всего_с_учетом_налога"></td>
+				<td><input type="text" name="страна"></td>
+				<td><input type="text" name="номер_тд"></td>
+			</tr>
+			<tr>
+				<td class="right namber small-text">Доп.сведения</td>
+				<td colspan="3"><input type="text" name="дополнительные_сведенья1"></td>
+				<td colspan="5"><input type="text" name="дополнительные_сведенья2"></td>
+				<td>
+					<button name="">сохранить запись</button>
+				</td>
+				<td>
+					<button>добавить доп.сведенья</button>
+				</td>
+			</tr>
+		</form>
 	</table>
 </div>

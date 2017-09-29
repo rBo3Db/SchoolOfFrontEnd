@@ -24,3 +24,6 @@ div.fe-my-invoice .right {
 div.fe-my-invoice th.first-column {
 	width: 16%;
 }
+div.fe-my-invoice input {
+	width: 95%;
+}
