@@ -27,8 +27,11 @@
 			<th>10</th>
 			<th>11</th>
 		</tr>
-		<% for (var i=0; i < obj.length; i++) {
-			var row = obj[i];
+		<% 
+		console.log('яв шаблоне!');
+			for (var i=0; i < obj.length; i++) {
+			console.log('яв шаблоне! 2');
+				var row = obj[i];
 		%>
 		<tr>
 			<td><%= row.name %></td>
@@ -48,7 +51,9 @@
 			<td><%= row.страна %></td> 
 			<td class="right"><%= row.номер_тд %></td>
 		</tr>
-		<% } %>
+		<% 
+		}; 
+		console.log('яв шаблоне! 3'); %>
 		<tr>
 			<td class="right namber small-text">Доп.сведения</td>
 			<td><%= obj.дополнительные_сведенья1 %> </td>

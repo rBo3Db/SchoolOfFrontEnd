@@ -6,7 +6,7 @@
 		<script type="text/javascript" src="underscore.js"></script>
 		<script type="text/javascript" src="require.js"></script>
 		<script>
-			require.config({map:{'*':{tpl:'tpl'}}});
+			require.config({map:{'*':{tpl:'tpl'}},urlArgs: "bust" + (new Date()).getTime()});
 			require(["myScript"], function(mycontrol) {
 				mycontrol('.my-control');
 			});
