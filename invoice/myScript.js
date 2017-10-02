@@ -9,16 +9,18 @@ define(['tpl!index.html', 'data.js'], function(tpl,data) {
 	 	$(sel).html(tpl(data));
 		console.log(2);
 	//	getElementbyName
-		$(function Naming(){
-		var названия_инпутов =[];
-		$("input[name]").keyup(function() {
-		var имя_инпута = $(this).attr("name");
-		названия_инпутов[имя_инпута] = $( this ).val();
-		console.log( названия_инпутов );
+		$(function Инпутинг(){
+			var названия_инпутов =[];
+			$("input[name]").keyup(function() {
+				var имя_инпута = $(this).attr("name");
+				названия_инпутов[имя_инпута] = $(this).val();
+				console.log( названия_инпутов );
 	//	console.log( названия_инпутов[имя_инпута] );
-  		})
-  		.keyup();
+  				})
+  			.keyup();
   		});
+  			//сначала клон, потом инсёрт
+
 	 	//	текст_щаблона_с_подставлеными_данными = шаблон_как_функция({дополнительные_сведенья1:'761303034622532', дополнительные_сведенья2:'штрихкод'});
 	 	//	$( ".my-control2" ).html(текст_щаблона_с_подставлеными_данными);
 	};
