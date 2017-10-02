@@ -9,7 +9,25 @@ define(['tpl!index.html', 'data.js'], function(tpl,data) {
 	 	$(sel).html(tpl(data));
 		console.log(2);
 	//	getElementbyName
+	$("input[name='имя']")
+  	.keyup(function() {
+	var имя = $( this ).val();
+	console.log( имя );
+  	})
+  	.keyup();
+
 	 	//	текст_щаблона_с_подставлеными_данными = шаблон_как_функция({дополнительные_сведенья1:'761303034622532', дополнительные_сведенья2:'штрихкод'});
 	 	//	$( ".my-control2" ).html(текст_щаблона_с_подставлеными_данными);
 	};
 });
+
+
+//	for (var i = 0; i < 12; i++) {
+//		$("input").attr("name");
+//		console.log(name);
+//		$("name").keyup(function() {
+//		имя = $("name").val();
+//		console.log( имя );
+//		})
+//  		.keyup();
+//  	}
