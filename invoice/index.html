@@ -38,7 +38,7 @@
 			<td><%= row.name %></td>
 			<td><%= row.единица_измерения %></td>
 			<td class="right"><%= row.количество %></td>
-			<td clas="right"><%= row.цена_за_единицу %></td>
+			<td class="right"><%= row.цена_за_единицу %></td>
 			<td class="right"><%= row.цена_за_всё %></td>
 			<td class="right"><%= row.акциз %></td>
 			<td>
@@ -60,7 +60,8 @@
 		<% 
 		}; 
 		console.log('яв шаблоне! 3'); %>
-		<form name="введеные данные">
+		<form >
+			<tbody class="data">
 			<tr>
 				<td><input type="text" name="имя" size="10px"></td>
 				<td><input type="text" name="единица_измерения" ></td>
@@ -79,17 +80,21 @@
 				<td><input type="text" name="страна"></td>
 				<td><input type="text" name="номер_тд"></td>
 			</tr>
-			<tr>
+			<tr class="clone_of_additional_information"> </tr>
+			
+			<tr class="additional_information">
 				<td class="right namber small-text">Доп.сведения</td>
 				<td colspan="3"><input type="text" name="дополнительные_сведенья1"></td>
 				<td colspan="5"><input type="text" name="дополнительные_сведенья2"></td>
 				<td>
-					<button name="">сохранить запись</button>
+				
+					<button name="удалить">удалить запись</button>
 				</td>
 				<td>
-					<button>добавить доп.сведенья</button>
+					<button class="create_new_row_of_additional_information">добавить доп.сведенья</button>
 				</td>
 			</tr>
+			</tbody>
 		</form>
 	</table>
 </div>

@@ -19,6 +19,11 @@ define(['tpl!index.html', 'data.js'], function(tpl,data) {
   				})
   			.keyup();
   		});
+		$(".create_new_row_of_additional_information").click(function () {
+			$( ".additional_information" ).clone(true).addClass("newElement").appendTo(".data");
+			$(".newElement").removeClass("additional_information");
+		});
+
   			//сначала клон, потом инсёрт
 
 	 	//	текст_щаблона_с_подставлеными_данными = шаблон_как_функция({дополнительные_сведенья1:'761303034622532', дополнительные_сведенья2:'штрихкод'});
@@ -26,7 +31,7 @@ define(['tpl!index.html', 'data.js'], function(tpl,data) {
 	};
 });
 
-
+			//prependTo
 /*  		var perem=[];
 		for (var i = 0; i < 12; i++) {
 			$("input[name]").attr("name");
