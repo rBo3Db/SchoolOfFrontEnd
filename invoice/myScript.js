@@ -9,19 +9,28 @@ define(['tpl!index.html', 'data.js'], function(tpl,data) {
 	 	$(sel).html(tpl(data));
 		console.log(2);
 	//	getElementbyName
-		$(function Инпутинг(){
-			var названия_инпутов =[];
-			$("input[name]").keyup(function() {
-				var имя_инпута = $(this).attr("name");
-				названия_инпутов[имя_инпута] = $(this).val();
-				console.log( названия_инпутов );
-	//	console.log( названия_инпутов[имя_инпута] );
-  				})
-  			.keyup();
-  		});
+
+		var названия_инпутов =[];
+		$("input[name]").keyup(function() {
+			var имя_инпута = $(this).attr("name");
+			названия_инпутов[имя_инпута] = $(this).val();
+			console.log( названия_инпутов );
+//	console.log( названия_инпутов[имя_инпута] );
+				})
+			.keyup();
+
 		$(".create_new_row_of_additional_information").click(function () {
-			$( ".additional_information" ).clone(true).addClass("newElement").appendTo(".data");
-			$(".newElement").removeClass("additional_information");
+
+	//		var дополнительные_сведенья = $('[class^="дополнительные_сведенья"]:last');
+	//		console.log(дополнительные_сведенья);
+	//		var num = parseInt( дополнительные_сведенья.prop("class").match(/\d+/g), 10 ) +1;
+
+	//		console.log(num);
+			var new_item= $( ".additional_information" ).clone(true); 
+			new_item.attr('collection-index',$('.collection-item').length);
+			new_item.addClass("collection-item").appendTo(".data");
+			new_item.show();
+			new_item.removeClass("additional_information");
 		});
 
   			//сначала клон, потом инсёрт
